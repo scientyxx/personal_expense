@@ -30,8 +30,8 @@ class MyHomePage extends StatelessWidget {
       date: DateTime.now(),
     ),
   ];
-  String titleInput;
-  String amountInput;
+  String? titleInput;
+  String? amountInput;
 
   @override
   Widget build(BuildContext context) {
@@ -68,9 +68,8 @@ class MyHomePage extends StatelessWidget {
                     decoration: InputDecoration(labelText: 'Amount'),
                     onChanged: (val) => amountInput = val,
                   ),
-                  FlatButton(
+                  TextButton(
                     child: Text('Add Transaction'),
-                    textColor: Colors.purple,
                     onPressed: () {
                       print(titleInput);
                       print(amountInput);
